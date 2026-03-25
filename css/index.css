@@ -1,0 +1,492 @@
+/* ================= GLOBAL ================= */
+
+section + section {
+  border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.read-fur:hover {
+  color: var(--accent);
+}
+
+
+
+/* ================= HEADER ================= */
+
+/*
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav {
+  display: flex;
+  gap: 28px;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+  position: relative;
+  min-height: 85vh;
+  padding: 120px 0;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-bg img {
+  position: absolute;
+  top: 0;
+  right: -12%;
+  width: 1200px;
+  max-height: 100vh;
+  object-fit: cover;
+
+  -webkit-mask-image: radial-gradient(
+    ellipse 90% 80% at 85% 30%,
+    black 60%,
+    transparent 85%
+  );
+  mask-image: radial-gradient(
+    ellipse 90% 80% at 85% 30%,
+    black 60%,
+    transparent 85%
+  );
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content {
+  max-width: 650px;
+  margin-top: 4rem;
+  padding-left: 0;
+  margin-left: -5rem;
+}
+
+.hero-text {
+    margin-bottom: 3rem;
+}
+
+/* ================= ABOUT ================= */
+
+.about {
+  padding: 60px 0;
+  background: linear-gradient(
+    to right,
+    var(--bg-main) 10%,
+    rgba(230,225,220,0.5),
+    var(--bg-main) 90%
+  );
+}
+
+.about-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.about-image img {
+  width: 110%;
+  max-width: 620px;
+  border-radius: 16px;
+}
+
+/* ================= BENEFITS ================= */
+
+.benefits {
+  padding: 60px 0;
+}
+
+.benefits-inner {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.benefits-list {
+  list-style: none;
+  padding: 0;
+}
+
+.benefits-list li {
+  padding-left: 24px;
+  margin-bottom: 14px;
+  position: relative;
+}
+
+.benefits-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-size: 28px;
+}
+
+.benefits__image img {
+  width: 110%;
+  max-width: 520px;
+  border-radius: 20px;
+  opacity: 0.95;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+/* ================= RECIPES ================= */
+
+.recipes {
+  padding: 70px 0;
+  text-align: center;
+  background: linear-gradient(
+    to right,
+    var(--bg-main) 10%,
+    rgba(230,225,220,0.5),
+    var(--bg-main) 90%
+  );
+}
+
+.recipes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  margin: 50px 0;
+}
+
+.recipe-card {
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+  transition: transform 0.25s ease;
+}
+
+.recipe-card:hover {
+  transform: translateY(-4px);
+}
+
+.recipe-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: c
+}
+
+/* final*/
+.final-cta { 
+  padding: 60px 0 80px; 
+  text-align: center; 
+  background: linear-gradient( to bottom, transparent, rgba(230, 225, 220, 0.4) ); 
+} 
+
+.final-cta p { 
+  max-width: 520px; 
+  margin: 0 auto 32px; 
+  color: var(--text-muted); 
+}
+
+
+/*GIRLLLLLLL*/
+
+
+/* =====================================================
+   approved!!
+
+TABLET (≤1024px)
+  
+   Includes:
+   - iPad portrait (768x1024)
+   - iPhone landscape (~844px width)
+   - Galaxy landscape (~800px width)
+===================================================== */
+@media (max-width: 1024px) {
+
+  /* ---------------- HEADER ---------------- */
+/*
+.nav {
+  display: flex;
+  gap: 20px;
+  font-size: 0.95rem;
+}
+
+.phone {
+  display: none;
+}
+
+
+
+
+  /* ---------------- HERO ---------------- */
+
+  .hero {
+    min-height: auto;
+    padding: 110px 30px 70px;
+    text-align: center;
+  }
+
+  .hero-bg {
+    display: none; /* remove large floating image */
+  }
+
+  .hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .hero h1 {
+    font-size: 2.6rem;
+  }
+
+  /* ---------------- ABOUT ---------------- */
+
+  .about-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .about-image img {
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  /* ---------------- BENEFITS ---------------- */
+
+.benefits-inner {
+  grid-template-columns: 1fr 0.8fr;
+  align-items: center;
+  text-align: left;
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+.benefits-content {
+  max-width: 500px;
+}
+
+.benefits-list {
+  margin: 0;
+}
+
+.benefits-list li {
+  max-width: none;
+  margin-bottom: 14px;
+}
+
+
+.benefits__image img {
+  max-height: 260px;
+  width: 100%;
+  object-fit: cover;
+}
+
+
+  /* ---------------- RECIPES ---------------- */
+
+.recipes-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.recipes-grid .recipe-card:nth-child(3) {
+  display: none;
+}
+
+  .recipe-card img {
+    height: 220px;
+  }
+
+}
+
+footer .container{
+  max-width: 70%;
+}
+
+
+
+
+
+/* =====================================================
+  approved!!
+
+   MOBILE LANDSCAPE
+   Example:
+   - iPhone 14 landscape (844x390)
+   - Galaxy landscape (~800x360)
+===================================================== */
+@media (max-width: 1024px) and (orientation: landscape) {
+
+   .hero {
+    padding: 80px 30px;
+  }
+
+  .hero h1 {
+    font-size: 2.3rem;
+  }
+
+  .header-inner {
+    justify-content: space-between;
+  }
+
+  .nav {
+    margin-left: auto;
+    padding-right: 0;
+  }
+
+  .about-image img,
+  .benefits__image img,
+  .recipe-card img {
+    max-height: 320px;
+    object-fit: cover;
+  }
+
+
+}
+
+/* Lets tryyy thsi */
+@media (max-width: 430px) {
+
+  /*
+  .header-inner {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+    font-size: 0.85rem;
+     margin-bottom: 2rem;
+  }
+
+  .logo-group img {
+    height: 36px;
+  }
+
+  .company-name a {
+    font-size: 0.95rem;
+  }
+*/
+  .benefits-inner {
+  grid-template-columns: 1fr;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+}
+
+.benefits__image img {
+  max-height: none;
+  width: 100%;
+}
+
+  /* Benefits list as “cards” instead of bullets */
+  .benefits-list {
+    list-style: none;       /* remove bullets */
+    padding: 0;
+  }
+
+  .benefits-list li {
+    position: relative;     /* no more pseudo bullets */
+    padding: 14px 16px;
+    margin-bottom: 12px;
+    background-color: rgba(230, 225, 220, 0.4); /* light subtle color */
+    border-radius: 12px;    /* rounded edges */
+    text-align: center;
+    font-size: 0.95rem;
+  }
+
+  .benefits-list li::before{
+    content: "";
+  }
+
+.recipe-card img {
+  height: auto;         /* let the image keep its natural ratio */
+  max-height: 200px;    /* optional: prevent super tall images */
+  width: 100%;          /* fill card width */
+  object-fit: cover;    /* crop nicely without stretching */
+}
+
+/* Reduce padding in recipes section */
+  .recipes {
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+
+  /* Optional: reduce space above the heading */
+  .recipes h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 2rem; /* keeps it readable but less tall */
+  }
+
+  
+
+}
+
+/* smallerrrrr phonesss*/
+@media (max-width: 360px) { /* iPhone SE / 5 width */
+
+  /* Reduce space between header and hero text */
+  .hero {
+    padding-top: 60px;  /* reduce from 100px+ to 60px */
+    padding-bottom: 40px; /* optional: tighten bottom */
+  }
+
+  .hero-content {
+    margin-top: 1rem;   /* previously 4rem or 5rem, now much smaller */
+  }
+
+  .hero h1 {
+    font-size: 1.9rem;  /* keep readable but smaller for tiny screens */
+  }
+
+  .hero-text {
+    font-size: 0.95rem; /* slightly smaller for narrow phones */
+    margin-bottom: 1.5rem; /* reduce space below text */
+  }
+/*
+  .header-inner {
+    flex-direction: column;  
+    align-items: center;
+    gap: 8px;                
+  }
+
+  .logo-group img {
+    height: 32px;            
+    width: auto;
+  }
+
+  .company-name a {
+    font-size: 0.85rem;      
+  }
+
+  .nav {
+    flex-wrap: wrap;          
+    justify-content: center;  
+    gap: 10px;                
+    font-size: 0.8rem;        
+  }
+
+  .phone {
+    display: none;          
+  }
+*/
+}
+

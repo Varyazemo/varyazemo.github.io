@@ -1,0 +1,295 @@
+:root {
+  --bg-main: #F6F2EE;
+  --text-main: #2B2B2B;
+  --text-muted: #6B6B6B;
+  --accent: #8c2f39;
+  --border-light: #e6e1dc;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:wght@400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;      /* ← TRUE CENTERING */
+  padding: 0 24px;
+}
+
+
+/* ===== Header ===== */
+
+header {
+  border-bottom: 1px solid var(--border-light);
+  background-color: var(--border-light);
+}
+
+
+
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* logo left, phone right, nav centered */
+  height: 90px;
+  gap: 24px;
+}
+
+/* Group logo + text */
+.logo-group {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* space between image and name */
+}
+
+/* Logo image */
+.logo-group img {
+  height: 60px; /* adjust to your liking */
+  width: auto;
+  display: block;
+}
+
+/* Company name next to logo */
+.company-name {
+  font-weight: bold;
+  font-size: 1.5em;
+  color: var(--accent);
+}
+
+
+/* Navigation */
+nav {
+  display: flex;
+  font-size: 14px;
+  flex: 1;
+  justify-content: center; /* keeps nav centered */
+  font-size: 1em;
+  font-weight: bold;
+  gap: 28px;
+}
+
+nav a {
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: var(--accent);
+  left: 0;
+  bottom: -4px;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+
+/* Phone on the right */
+.phone {
+  font-weight: 600;
+  color: var(--accent);
+  white-space: nowrap;
+  margin-left: auto;
+}
+
+.phone:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
+}
+
+
+
+/* ===== Buttons ===== */
+
+.btn-primary {
+  background-color: var(--accent);
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 14px;
+  display: inline-block;
+  transition: opacity 0.2s ease;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+/* ===== Headings ===== */
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+h2 {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+/* ===== Footer ===== */
+
+footer {
+  border-top: 1px solid var(--border-light);
+  padding: 20px 0;
+  font-size: 14px;
+  color: var(--text-muted);
+  position: relative;
+  left: -15%;
+}
+
+hr {
+  border: none; /* Removes the default 3D border effect */
+  height: 2px; /* Sets the thickness of the line */
+  background: linear-gradient( to right, var(--bg-main) 20% , var(--text-muted) , var(--bg-main) 80%);
+  width: 95%;
+  position: relative;
+  margin: auto;
+}
+
+img {
+  display: block;
+}
+
+/* =====================================================
+   TABLET / PHONE LANDSCAPE
+===================================================== */
+
+@media (max-width: 1024px){
+
+
+  .nav {
+  display: flex;
+  gap: 20px;
+  font-size: 0.95rem;
+  }
+  .phone {
+  display: none;
+}
+
+  a:hover::after,
+  a::after,
+  h2:hover::after,
+  h2::after,
+  .feature:hover,
+  button:hover {
+    background: none !important;
+    color: inherit !important;
+    box-shadow: none !important;
+    transform: none !important;
+  }
+
+}
+
+@media (max-width: 1024px) and (orientation: landscape) {
+ .header-inner {
+    justify-content: space-between;
+  }
+    nav {
+    margin-left: auto;
+    padding-right: 0;
+  }
+
+}
+/* =====================================================
+   PHONES
+===================================================== */
+
+@media (max-width: 430px) {
+
+  .header-inner {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+    font-size: 0.85rem;
+  
+  }
+  
+
+  nav a {
+  white-space: nowrap;
+}
+
+  .logo-group img {
+    height: 36px;
+  }
+
+  .company-name a {
+    font-size: 0.95rem;
+  }
+
+}
+
+
+/* =====================================================
+   SMALL PHONES (iPhone SE / 5)
+===================================================== */
+
+@media (max-width: 360px) {
+
+  .header-inner {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .logo-group img {
+    height: 32px;
+    width: auto;
+  }
+
+  .company-name a {
+    font-size: 0.85rem;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    font-size: 0.85rem;
+  }
+
+
+
+nav a {
+  white-space: nowrap;
+}
+
+  .phone {
+    display: none;
+  }
+
+}
